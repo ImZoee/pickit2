@@ -52,21 +52,3 @@ PKOB operation has been tested with the following development boards:
 - Explorer 16/32 Development Board (DM240001-2)
 
 Please Note that all new devboards have PKOB4 or some other solution, those are not supported. Also many older boards have been updated to new revision. For example Curiosity HPC board (DM164136) originally had PKOB (based on PICkit3), but revision 2 has PKOB4 (based on PICkit4). The easiest way is to look at the microcontroller type on the devboard. If it is PIC24FJ256GB106, it is very likely PKOB, and probably will work.
-
-Downloads
----------
-To download this software, see 'Releases' on right edge of this github page.  &rarr;
-
-Thanks
-------
-I haven't developed this software all by myself. The biggest part has of course been Microchip's original work, and all the contributions they had received from PICkit2 users. In addition to that, I have used work from other people. My thanks go to all contributions listed below:
-
-- bequest333 [for initially adding support for MSB 1st chips](https://www.eevblog.com/forum/microcontrollers/pic16f18857-programming-with-pickit2/)
-- Anobium from [PICkitPlus](https://www.pickitplus.co.uk/) team for [providing updated device file until 2020](https://github.com/Anobium/PICKitPlus/releases)
-- dougy83 for creating [device file editor](https://sites.google.com/site/pk2devicefileeditor/)
-- Miklós Márton for [adding PICkit3 support to pk2cmd](https://github.com/martonmiklos/pk2cmd)
-- timijk, scasis and TrevorW for [adding support for all PIC32MX](https://forum.microchip.com/s/topic/a5C3l000000MOXFEA4/t324373)
-- Adem Gdk for adding some SPI FLASH devices and testing SPI FLASH support
-- Jaren Sanson for [tool which adds some PIC24 devices](https://jared.geek.nz/2013/08/pickit2-revisited/)
-- boborjan2 for [libusb-1.0 support on linux and other improvements](https://github.com/boborjan2/pk2cmd)
-- All people who have sent me bug reports
