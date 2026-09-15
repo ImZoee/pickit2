@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:pickit2}/PICkitMac",
+            "name": "Debug PICkitMac (PICkitMac)",
+            "target": "PICkitMac",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug PICkitMac (PICkitMac)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:pickit2}/PICkitMac",
+            "name": "Release PICkitMac (PICkitMac)",
+            "target": "PICkitMac",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release PICkitMac (PICkitMac)"
+        }
+    ]
+}

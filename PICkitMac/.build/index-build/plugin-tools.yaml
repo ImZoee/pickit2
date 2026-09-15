@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PICkitMac-x86_64-apple-macosx-debug.module": ["<PICkitMac-x86_64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<PICkitMac-x86_64-apple-macosx-debug.module>"]
+  "test": ["<PICkitMac-x86_64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/CommandOptions.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/ContentView.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/PICkitMacApp.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/ProgrammerModel.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/Views.swift"]
+    outputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/sources"]
+    description: "Write auxiliary file /Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/sources"
+
+  "/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<PICkitMac-x86_64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/Modules/PICkitMac.swiftmodule"]
+    outputs: ["<PICkitMac-x86_64-apple-macosx-debug.module>"]
+
+  "C.PICkitMac-x86_64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/CommandOptions.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/ContentView.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/PICkitMacApp.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/ProgrammerModel.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/Views.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/sources"]
+    outputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/Modules/PICkitMac.swiftmodule"]
+    description: "Compiling Swift Module 'PICkitMac' (5 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","PICkitMac","-emit-dependencies","-emit-module","-emit-module-path","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/Modules/PICkitMac.swiftmodule","-output-file-map","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/output-file-map.json","-incremental","@/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/PICkitMac.build/sources","-I","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/.build/index-build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","pickitmac"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Sources/PICkitMac/","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Package.swift","/Users/marius/Documents/Proiecte Personale/pickit2/PICkitMac/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
